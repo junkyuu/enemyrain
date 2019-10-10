@@ -20,6 +20,14 @@
     z-index: 2;
 }
 
+.Hp {
+    float: right;
+    margin-right: 60px;
+    margin-top: 25px;
+    text-align: center;
+    color:white;
+}
+
 .enemyFront{
     position: absolute;
     width: 45px;

@@ -56,11 +56,6 @@ function keyDownHandler(e) {
 
 }
 
-            //부딪혔을때 HP 줄이기
-                /*
-                HP줄어드는 거 구현하기
-                */
-
 document.addEventListener("keydown", keyDownHandler, false);
 
 

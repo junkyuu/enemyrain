@@ -12,13 +12,13 @@ class Enemy {
     constructor(){
         this.enemy = document.createElement("div");
         this.enemy.className = "enemyFront";
+        this.enemy.style.height = "54px";
         this.position = Math.floor(Math.random()*(max - min)) + min;
         this.enemy.style.left = `${this.position}px`;
-        this.enemy.style.height = "54px";
 
         bodyElement.insertBefore(this.enemy, heroJs);
 
-        var currentEnemyTopPixel = this.enemy.style.top;
+        let currentEnemyTopPixel = this.enemy.style.top;
         let currentEnemyHeightPixel = this.enemy.style.height;
 
         //enemyFallingSpeed에 맞춰 내려오기
@@ -49,7 +49,6 @@ class Enemy {
             }
 
         }, enemyFallingSpeed);
-
     } 
 }
 // enemyCreatingSpeed에 맞춰 몬스터 생성하기

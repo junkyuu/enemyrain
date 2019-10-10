@@ -1,6 +1,8 @@
-let touch = 0;
+let hpNumber = document.getElementById("HpNumber");
+let hp = 3;
+hpNumber.innerHTML = hp.toString();
 
-setInterval(() => {
+let intervalId = setInterval(() => {
 
     let firstEnemy = document.querySelector(".enemyFront");
     let firstEnemyStyle = window.getComputedStyle(firstEnemy);
@@ -29,31 +31,29 @@ setInterval(() => {
         if(firstEnemyLeftNumber - 35 < heroLeftPixel && heroLeftPixel <firstEnemyLeftNumber + 45){
                 //히어로의 width가 35일땐 바로 처리
                 if(heroWidthNumber === 35){
-                    //한번만 부딪히는 걸로
+                    //한번만 부딪히는 로직
                     if(firstEnemyTopNumber === 546){
-                        touch++;
-                        console.log(touch);
+                        hp--;
                     }
                 }
                 //히어로의 width가 22일땐 범위를 조정해서 처리
                 if(parseInt(heroWidthNumber) === 21){
                     if(firstEnemyLeftNumber - 22 < heroLeftPixel && heroLeftPixel <firstEnemyLeftNumber + 45){
-                        //한번만 부딪히는 로직 만들기
+                        //한번만 부딪히는 로직
                         if(firstEnemyTopNumber === 546){
-                            touch++;
-                            console.log(touch);
+                           hp--;
                         }
                     }
                 }
         }    
     }
+
+    if(hp === 0){
+        clearInterval(intervalId);
+        alert("Game Over");
+        window.location.reload(true);
+    }
+
+    hpNumber.innerHTML = hp.toString();
     
-
-}, enemyFallingSpeed)
-/*
-
-if(firstEnemyTopPixel > 492){
-    if(heroObject.style.left)
-}
-
-*/
+}, enemyFallingSpeed);
