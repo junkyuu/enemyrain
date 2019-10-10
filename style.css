@@ -1,0 +1,48 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+#bg {
+    position: relative;
+    width:800px;
+    height:600px;
+    background-image: url("images/bg.png");
+    margin: 0 auto;
+}
+
+
+#hero {
+    position: relative;
+    top: -54px;
+    background-image: url("images/hero.png");
+    height:54px;
+    z-index: 2;
+}
+
+.enemyFront{
+    position: absolute;
+    width: 45px;
+    background-image: url("images/enemy.png");
+    background-position: 0 0;
+}
+
+.heroFront{
+    width: 35px;
+    background-position: 0 0;
+}
+
+.heroBack{
+    width: 35px;
+    background-position: -35px 0;
+}
+
+.heroLeft{
+    width: 22px;
+    background-position: -77px 0;
+}
+
+.heroRight{
+    width: 22px;
+    background-position: -111px 0;
+}
